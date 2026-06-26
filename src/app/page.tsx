@@ -4,7 +4,8 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { ParticipationSection } from "@/components/hovercard";
 import { MoreProjectsCard } from "@/components/githubCard";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Link2Icon } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
   {
@@ -92,6 +93,13 @@ export default function AboutSection() {
   return (
     <section className="min-h-screen bg-stone-50 px-6 py-24">
       <div className="mx-auto max-w-2xl">
+        {/*blogs section*/}
+        <div className="mb-10 flex justify-end items-center gap-5">
+          <Button asChild variant={"outline"}>
+            <Link href="/blogs">
+            <Link2Icon/> Blogs</Link>
+          </Button>
+        </div>
         {/* Hero */}
         <div className="space-y-4">
           <p className="text-5xl text-stone-700 font-semibold mb-0">
